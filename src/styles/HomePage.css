@@ -1,0 +1,272 @@
+body {
+  margin: 0px;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+
+.NavbarBar {
+  height: 58px;
+}
+
+.Navlist {
+  display: flex;
+  list-style: none;
+  color: black;
+  padding-right: 5%;
+}
+
+.Navlistitem {
+  padding: 0px 10px 0px 10px;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.Landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image:url("../assets/home-image_one.svg");
+  background-size: 125%;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 888px;
+  margin-top: 90px;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 44px;
+  font-weight: 700;
+  margin: 100px 0 0 0;
+} 
+
+h2 {
+  color: white;
+  font-size: 44px;
+  font-weight: 400;
+  margin: 10px 10px;
+}
+
+.btn-getting-started {
+  margin: 30px;
+  color: #1473e6; 
+  font-size: 13px;
+  padding: 8px 16px 8px 16px;
+}
+
+.title-text {
+  margin: 0;
+  word-wrap: break-word;
+  font-size: 18px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.Floating-island {
+  width: 75%;
+  height: 50%;
+  background-color: white;
+  box-shadow: 0px 8px 16px black;
+}
+
+.libraries {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 90%;
+  height: 90%;
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.library {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.design-foundations {
+  margin-right: 10%;
+}
+
+.ui-component {
+  margin-right: 10%;
+}
+
+.icon-wrapper {
+  width: 100%;
+  height: 35%;
+  border: 1px solid #c9c9c9;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  color: #1473e6;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  align-self: baseline;
+  margin: 0;
+}
+
+.text {
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.brand-new {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 5%;
+  align-items: center;
+}
+.brand-new-image {
+  width: 50%;
+  padding-right: 5%;
+}
+
+.brand-new-description {
+  height: 100%;
+}
+
+.brand-new-title-text {
+  height: 18%;
+  padding-left: 5%;
+  margin-right: 20%;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+  font-size: 18px;
+  border-left: 5px solid #d93d32;
+}
+
+.brand-new-title {
+  color: black;
+  margin: 0;
+}
+
+.brand-new-button {
+  margin-top: 5%;
+  background-color: #1473e6;
+  color: white;
+  border: 0;
+  padding: 8px 16px 8px 16px;
+}
+
+.inclusive {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: rgb(10, 142, 155);
+  align-items: center;
+}
+
+.inclusive-image {
+  width: 75%;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.inclusive-description {
+  width: 65%;
+  height: 100%;
+}
+
+.inclusive-title-text {
+  height: 18%;
+  margin-left: 15%;
+  padding-left: 5%;
+  margin-right: 20%;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+  font-size: 18px;
+  border-left: 5px solid white;
+  color: white;
+}
+
+.inclusive-title {
+  margin: 0;
+}
+
+.inclusive-button {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-left: 20%;
+  
+}
+.accessibility {
+  color: #1473e6;
+  border: 0;
+  padding: 8px 16px 8px 16px;
+  margin: 0;
+}
+
+.internationalization {
+  color: #1473e6;
+  border: 0;
+  padding: 8px 16px 8px 16px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 48px;
+  bottom: 0;
+  border-top: 1px solid #c9c9c9;
+  align-items: center;
+}
+
+.footer-list {
+  display: flex;
+  list-style: none;
+  color: black;
+  padding-right: 5%;
+  margin: 0;
+}
+
+.footer-list-item {
+  padding: 0px 10px 0px 10px;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 10px;
+  font-style: italic;
+}

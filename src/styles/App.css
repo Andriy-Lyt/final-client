@@ -1,0 +1,59 @@
+.app-container{
+  /* border:1px solid green; */
+  width: 100%;
+}
+
+/* Helpers -- */
+.w100 {width: 100%;}
+
+/* Form General */
+input {
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  outline:none;
+}
+input:focus {
+  box-shadow: 0 0 1px 1px var(--mblue);
+  padding: 3px;
+  border:none;
+  outline:none;
+}
+/* Button General */
+button{
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  padding: 2px 4px;
+  transition: all 0.2s;
+}
+button:hover {
+  cursor:pointer;
+}
+button:active{
+  transform: scale(1.1);
+}
+.btn-green {
+  border: 1px solid var(--lgreen);
+  background-color: var(--slgreen);
+}
+.btn-green:hover{
+  background-color: var(--lgreen);
+  border: 1px solid var(--mgreen);
+}
+.btn-red {
+  background-color: var(--slred);
+  border: 1px solid var(--mred);
+}
+.btn-red:hover {
+  background-color: var(--lred);
+}
+.btn-blue {
+  border: 1px solid var(--mblue);
+  background-color: var(--lblue);
+}
+
+/* .btn-blue:hover{
+  background-color: var(--mblue);
+  border: 1px solid var(--dgreen);
+}
+ */

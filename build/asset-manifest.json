@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.07921201.css",
+    "main.js": "/static/js/main.64051c2d.js",
+    "static/media/brand-new.svg": "/static/media/brand-new.49b04e1f74a4e8add2f7662d8fe4f973.svg",
+    "static/media/inclusive.svg": "/static/media/inclusive.ff2fb4c2f0a72a8edcf403c0789cf204.svg",
+    "static/media/home-image_one.svg": "/static/media/home-image_one.acfde1ba503a805f57e4.svg",
+    "static/media/header-logo-full.svg": "/static/media/header-logo-full.5682e4260c35c2493d603da9ef79c039.svg",
+    "index.html": "/index.html",
+    "static/media/avaya-logo-footer.svg": "/static/media/avaya-logo-footer.5865b61665690a4ec0c11b57bf93f653.svg",
+    "static/media/icon-library.svg": "/static/media/icon-library.76ad841b119a1276bae30d91e89f4dc5.svg",
+    "static/media/ui-components.svg": "/static/media/ui-components.faee0bcda97a44a6e43656eb896e90de.svg",
+    "static/media/design-foundations.svg": "/static/media/design-foundations.673e50257be048187b057bbae781bf8e.svg",
+    "main.07921201.css.map": "/static/css/main.07921201.css.map",
+    "main.64051c2d.js.map": "/static/js/main.64051c2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07921201.css",
+    "static/js/main.64051c2d.js"
+  ]
+}
