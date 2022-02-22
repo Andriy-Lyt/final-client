@@ -16,10 +16,10 @@ function HomePage() {
         <img src={headerLogo} alt="header-logo" className="header-logo"/>
       </a>
       <ul className="Navlist">
-        <a href="#" className="Navlistitem new" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/whats-new/">What's New</a>
-        <a href="#" className="Navlistitem guide">Guidelines</a>
-        <a href="#" className="Navlistitem components">Components</a>
-        <a href="#" className="Navlistitem faqs" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/faq/">FAQs</a>
+        <a href="" className="Navlistitem new" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/whats-new/">What's New</a>
+        <a href="" className="Navlistitem guide">Guidelines</a>
+        <a href="" className="Navlistitem components">Components</a>
+        <a href="" className="Navlistitem faqs" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/faq/">FAQs</a>
       </ul>
     </nav>
 
