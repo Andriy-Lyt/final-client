@@ -1,7 +1,7 @@
 import React, {} from 'react';
 import './../styles/Chat.css';
 
-function Landing({joinRoom}) {
+function Landing({joinRoom, sendMessage, currentMessage, setCurrentMessage, messageList, setMessageList}) {
   const chatStyle = {
     height:"650px",
     width:"350px",
@@ -12,7 +12,15 @@ function Landing({joinRoom}) {
   const submitForm = (e) => {
     e.preventDefault();
     joinRoom("You", "1");
+    sendMessage(e);
   }
+
+  function onEnterPress(e) {
+    if ( e.key === "Enter" && !e.shiftKey) {
+      submitForm(e);
+    }
+  }
+ 
 
   return (
     <div className="landing" style={chatStyle}>
@@ -27,7 +35,7 @@ function Landing({joinRoom}) {
         Start a Conversation   
           
         <form className="landing-form" onSubmit={submitForm} >
-          <textarea maxLength="500" placeholder="Type your message.."  />
+          <textarea  maxLength="500" placeholder="Type your message.." onKeyPress={onEnterPress} onChange={(event) => {setCurrentMessage(event.target.value.trim()) }}/>
           <button type="submit" className="textarea-btn">Send us a message</button>
         </form>
       </div>

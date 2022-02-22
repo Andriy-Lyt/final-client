@@ -28,13 +28,13 @@ function Login({setUsername, setUserEmail, setRoom, joinRoom}) {
       setEmailError("Please enter your Email");
     } 
     if(formInputName && formInputEmail) {
-      localStorage.setItem('username', formInputName);
+      // localStorage.setItem('username', formInputName);
       setUsername(formInputName);
 
-      localStorage.setItem('useremail', formInputEmail);
+      // localStorage.setItem('useremail', formInputEmail);
       setUserEmail(formInputEmail);
       
-      localStorage.setItem('room', selectedRoom);
+      // localStorage.setItem('room', selectedRoom);
       setRoom(selectedRoom);
 
       joinRoom(formInputName, selectedRoom);

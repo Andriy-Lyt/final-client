@@ -1,46 +1,17 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './../styles/Chat.css';
 
-function Chat({socket, username, setUsername, userEmail, setUserEmail, room, setRoom, setShowChat, isOpen, setIsOpen}) {
-  const [currentMessage, setCurrentMessage] = useState("");
-  const [messageList, setMessageList] = useState(localStorage.getItem("messageList") ? JSON.parse(localStorage.getItem("messageList")) : []);
-  const [formError, setFormError] = useState("");
+function Chat({socket, username, setUsername, sendMessage, onEnterPress, userEmail, setUserEmail, room, setRoom, setShowChat, isOpen, setIsOpen, currentMessage, setCurrentMessage, messageList, setMessageList,
+  formError, setFormError}) {
 
-  useEffect(() => {
+/*   useEffect(() => {
     localStorage.setItem("messageList", JSON.stringify(messageList));
+    console.log("messageList: ", JSON.stringify(messageList));
   }, [messageList]);
-
-  const sendMessage = async (e) => {
-    e.preventDefault();
-    if (currentMessage !== '') {     
-      const hours =  new Date(Date.now()).getHours();
-      const printHours = hours < 10 ? `0${hours}` : hours;
-      const minutes = new Date(Date.now()).getMinutes();
-      const printMinutes = minutes < 10 ? `0${minutes}` : minutes;
-      const messageData = {
-        room: room, //comes from props
-        user: username,
-        message: currentMessage,
-        time: `${printHours}:${printMinutes}`
-      };
-      await socket.emit("send_message", messageData);
-      setMessageList((prev) => [...prev, messageData]);
-    } else {
-      setFormError("Please enter the Message");
-    }
-    e.target.value = '';
-    setCurrentMessage('');
-}
-
- function onKeyPress(e) {
-   if ( e.key === "Enter" && !e.shiftKey) {
-    sendMessage(e);
-   }
- }
-
+ */
  useEffect(() => { 
    socket.on("receive_message", (data) => {
-      // console.log("data received back from backend: ", data);
+      console.log("data received back from backend: ", data);
       setMessageList((prev) => [...prev, data]);
     });
   }, [socket]);
@@ -49,7 +20,7 @@ function Chat({socket, username, setUsername, userEmail, setUserEmail, room, set
 
   useEffect(() => {
    return lastMesRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [currentMessage]);
+  }, [messageList]);
 
   return (
     <section className="chat-container">
@@ -70,13 +41,15 @@ function Chat({socket, username, setUsername, userEmail, setUserEmail, room, set
       {/* Send Chat Messages */}
       <div className="form-container">
        {formError && <div className="error"> {formError} </div>}
+
         <form className="chat-form" onSubmit={sendMessage}>        
           <textarea maxLength="500" placeholder="Type your message.." 
           onChange={(event) => {setCurrentMessage(event.target.value.trim()); setFormError(''); }}
-          onKeyPress={onKeyPress}>
+          onKeyPress={onEnterPress}>
           </textarea>
           <button type="submit" className="btn-green mes-send-btn"> &#9658; </button>
         </form>
+
     </div>
   </section>
 )

@@ -8,6 +8,10 @@ import Landing from './Landing';
 function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail, setUserEmail, room, showChat, setShowChat}) {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [currentMessage, setCurrentMessage] = useState("");
+  // const [messageList, setMessageList] = useState(localStorage.getItem("messageList") ? JSON.parse(localStorage.getItem("messageList")) : []);
+  const [messageList, setMessageList] = useState([]);
+  const [formError, setFormError] = useState("");
 
   const toggleOpen = () => setIsOpen(!isOpen);
   const toggleShowChat = () => setShowChat(!showChat);
@@ -18,6 +22,34 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
     opacity: isOpen ? "1" : "0.7",
     boxShadow: isOpen ? "0 0 0px 1px var(--mblue), 0 0 0px 3px rgba(240, 241, 243, 0.8)" : "none"
   }
+
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    if (currentMessage !== '') {     
+      const hours =  new Date(Date.now()).getHours();
+      const printHours = hours < 10 ? `0${hours}` : hours;
+      const minutes = new Date(Date.now()).getMinutes();
+      const printMinutes = minutes < 10 ? `0${minutes}` : minutes;
+      const messageData = {
+        room: room, //comes from props
+        user: username,
+        message: currentMessage,
+        time: `${printHours}:${printMinutes}`
+      };
+      await socket.emit("send_message", messageData);
+      setMessageList((prev) => [...prev, messageData]);
+    } else {
+      setFormError("Please enter the Message");
+    }
+    e.target.value = '';
+    setCurrentMessage('');
+}
+
+ function onEnterPress(e) {
+   if ( e.key === "Enter" && !e.shiftKey) {
+    sendMessage(e);
+   }
+ }
 
   return (
     <>
@@ -35,6 +67,11 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
       
       {(!showChat && isOpen) &&
       <Landing
+      sendMessage={sendMessage}
+      currentMessage={currentMessage}
+      setCurrentMessage={setCurrentMessage}
+      messageList={messageList}
+      setMessageList={setMessageList}
       socket={socket} 
       username={"You"} 
       userEmail={userEmail}
@@ -50,6 +87,14 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
 
       {(showChat && isOpen) &&
       <Chat
+        sendMessage={sendMessage}
+        onEnterPress={onEnterPress}
+        currentMessage={currentMessage}
+        setCurrentMessage={setCurrentMessage}
+        messageList={messageList}
+        setMessageList={setMessageList}
+        formError={formError}
+        setFormError={setFormError}
         socket={socket} 
         username={"You"} 
         userEmail={userEmail}
