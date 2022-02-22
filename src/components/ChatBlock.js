@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Chat from './Chat';
 // import Login from './Login';
 import './../styles/Chat.css';
-// import Buble from './Bubble';
+import Buble from './Bubble';
 import Landing from './Landing';
 
 function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail, setUserEmail, room, showChat, setShowChat}) {
