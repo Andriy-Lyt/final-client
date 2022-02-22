@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3f808df3.chunk.css",
+    "main.js": "/static/js/main.3ce26003.chunk.js",
+    "main.js.map": "/static/js/main.3ce26003.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.c1a0ad9b.chunk.css": "/static/css/2.c1a0ad9b.chunk.css",
+    "static/js/2.4bc2eb02.chunk.js": "/static/js/2.4bc2eb02.chunk.js",
+    "static/js/2.4bc2eb02.chunk.js.map": "/static/js/2.4bc2eb02.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.785e85178239a37ec904d31edf432e6c.js": "/precache-manifest.785e85178239a37ec904d31edf432e6c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.c1a0ad9b.chunk.css.map": "/static/css/2.c1a0ad9b.chunk.css.map",
+    "static/css/main.3f808df3.chunk.css.map": "/static/css/main.3f808df3.chunk.css.map",
+    "static/media/avaya-logo-footer.svg": "/static/media/avaya-logo-footer.a2b3809c.svg",
+    "static/media/brand-new.svg": "/static/media/brand-new.45e7ddb9.svg",
+    "static/media/design-foundations.svg": "/static/media/design-foundations.14cd814f.svg",
+    "static/media/header-logo-full.svg": "/static/media/header-logo-full.302f3156.svg",
+    "static/media/HomePage.css": "/static/media/home-image_one.806cbebc.svg",
+    "static/media/icon-library.svg": "/static/media/icon-library.83fae2ed.svg",
+    "static/media/inclusive.svg": "/static/media/inclusive.1730e10c.svg",
+    "static/media/ui-components.svg": "/static/media/ui-components.24c909d4.svg"
+  }
+}

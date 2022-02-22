@@ -48,7 +48,7 @@ function Chat({socket, username, setUsername, userEmail, setUserEmail, room, set
   const lastMesRef = useRef(null);
 
   useEffect(() => {
-    lastMesRef.current?.scrollIntoView({ behavior: "smooth" })
+   return lastMesRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [currentMessage]);
 
   return (

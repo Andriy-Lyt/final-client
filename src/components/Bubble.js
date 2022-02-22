@@ -1,3 +1,4 @@
+import React from 'react';
 import { Icon } from '@avaya/neo-react'
 
 export default function Bubble() {
