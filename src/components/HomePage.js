@@ -13,13 +13,13 @@ function HomePage() {
   <div>
     <nav className="Navbar">
       <a className="NavbarBar" title="Neo Design System" href="https://design.avaya.com/">
-        <img alt="fix" alt="fix" src={headerLogo} alt="header-logo" className="header-logo"/>
+        <img src={headerLogo} alt="header-logo" className="header-logo"/>
       </a>
       <ul className="Navlist">
-        <a className="Navlistitem new" target="_blank" rel="noreferrer" rel="noreferrer" href="https://design.avaya.com/whats-new/">What's New</a>
-        <a className="Navlistitem guide">Guidelines</a>
-        <a className="Navlistitem components">Components</a>
-        <a className="Navlistitem faqs" target="_blank" rel="noreferrer" rel="noreferrer" href="https://design.avaya.com/faq/">FAQs</a>
+        <a href="#" className="Navlistitem new" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/whats-new/">What's New</a>
+        <a href="#" className="Navlistitem guide">Guidelines</a>
+        <a href="#" className="Navlistitem components">Components</a>
+        <a href="#" className="Navlistitem faqs" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/faq/">FAQs</a>
       </ul>
     </nav>
 
@@ -89,15 +89,15 @@ function HomePage() {
     </section>
 
     <footer>
-      <img alt="fix" src={footerLogo} alt="footer-logo" className="footer-logo"/>
+      <img src={footerLogo} alt="footer-logo" className="footer-logo"/>
       <ul className="footer-list">
-        <a className="footer-list-item terms" target="_blank" rel="noreferrer" href="https://www.avaya.com/en/termsofuse/">Terms of Use</a>
-        <a className="footer-list-item license" target="_blank" rel="noreferrer" href="https://design.avayacloud.com/license/">License</a>
-        <a className="footer-list-item privacy" target="_blank" rel="noreferrer" href="https://www.avaya.com/en/privacy/commitment/">Privacy</a>
-        <a className="footer-list-item trademarks" target="_blank" rel="noreferrer" href="https://www.avaya.com/en/trademarks/">Trademarks</a>
-        <a className="footer-list-item accessibility" target="_blank" rel="noreferrer" href="https://www.avaya.com/en/accessibility/">Accessibility</a>
-        <a className="footer-list-item careers" target="_blank" rel="noreferrer" href="https://careers.avaya.com/">Careers</a>
-        <a className="footer-list-item newsletter" target="_blank" rel="noreferrer" href="https://design.avaya.com/subscribe/">Newsletter</a>
+        <a className="footer-list-item terms" target="_blank" rel="noopener noreferrer" href="https://www.avaya.com/en/termsofuse/">Terms of Use</a>
+        <a className="footer-list-item license" target="_blank" rel="noopener noreferrer" href="https://design.avayacloud.com/license/">License</a>
+        <a className="footer-list-item privacy" target="_blank" rel="noopener noreferrer" href="https://www.avaya.com/en/privacy/commitment/">Privacy</a>
+        <a className="footer-list-item trademarks" target="_blank" rel="noopener noreferrer" href="https://www.avaya.com/en/trademarks/">Trademarks</a>
+        <a className="footer-list-item accessibility" target="_blank" rel="noopener noreferrer" href="https://www.avaya.com/en/accessibility/">Accessibility</a>
+        <a className="footer-list-item careers" target="_blank" rel="noopener noreferrer" href="https://careers.avaya.com/">Careers</a>
+        <a className="footer-list-item newsletter" target="_blank" rel="noopener noreferrer" href="https://design.avaya.com/subscribe/">Newsletter</a>
       </ul>
       <p className="footer-copyright">© 2022 Avaya, Inc.</p>
     </footer>

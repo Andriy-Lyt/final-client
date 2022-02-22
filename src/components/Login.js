@@ -3,7 +3,7 @@ import './../styles/App.css';
 import './../styles/Login.css';
 
 function Login({setUsername, setUserEmail, setRoom, joinRoom}) {
-  const[selectedRoom, setSelectedRoom] = useState(1);
+  const[selectedRoom, /* setSelectedRoom */] = useState(1);
   const[nameError, setNameError] = useState('');
   const[emailError, setEmailError] = useState('');
   const[formInputName, setFormInputName] = useState('');
