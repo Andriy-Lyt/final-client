@@ -7,18 +7,16 @@ import Landing from './Landing';
 
 function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail, setUserEmail, room, showChat, setShowChat}) {
 
-  console.log("ChatBlock.js rendered");
-
   const [isOpen, setIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState("");
   // const [messageList, setMessageList] = useState(localStorage.getItem("messageList") ? JSON.parse(localStorage.getItem("messageList")) : []);
   const [messageList, setMessageList] = useState([]);
   const [formError, setFormError] = useState("");
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log("messageList ChatBlock.js line 17: ", messageList);
   }, [messageList]);
-
+ */
   const toggleOpen = () => setIsOpen(!isOpen);
   const toggleShowChat = () => setShowChat(!showChat);
 

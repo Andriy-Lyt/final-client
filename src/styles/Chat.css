@@ -68,20 +68,26 @@
   text-align: start;
   background-color: #f0fff0;
 }
+.message-div[data-id='support'] .message-text{
+  border-color:#21b066;
+}
 .message-div[data-id='client'] {
   align-self: flex-end;
   text-align: end;
   background-color:#e6fdff;
+}
+.message-div[data-id='client'] .message-text{
+  border-color: #1d4dc4;
 }
 .message-div p {
   margin: 0 2px;
   padding: 3px;
 }
 .message-text{
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
-  outline: auto;
-  border-color: #1c3074;
+  outline: none;
+  /* border-color: #1c3074; */
 }
 .message-time, .message-user {
   font-size: 0.8rem;
