@@ -66,10 +66,12 @@
 .message-div[data-id='support'] {
   align-self: flex-start;
   text-align: start;
+  background-color: #f0fff0;
 }
 .message-div[data-id='client'] {
   align-self: flex-end;
   text-align: end;
+  background-color:#e6fdff;
 }
 .message-div p {
   margin: 0 2px;

@@ -51,11 +51,11 @@ function Landing({joinRoom, sendMessage, currentMessage, setCurrentMessage, mess
         <div className="search-results-container">
           <h4 className="h4">Search Results</h4>
           <div className="search-results-div">
-            <p><a href="https://support.avaya.com/public/index?page=content&id=PRCS100796&actp=LIST_POPULAR&rp=home" target="_blank" rel="noreferrer">PRCS100796</a> IT Help Contact Information for Customers</p> 
-            <p><a href="https://support.avaya.com/public/index?page=content&id=TRNG100385&actp=LIST_POPULAR&rp=home" target="_blank" rel="noreferrer">TRNG100385</a> Tips for Searching effectively on support site</p> 
-            <p><a href="https://support.avaya.com/public/index?page=content&id=SOLN265671&actp=LIST_POPULAR&rp=home" target="_blank" rel="noreferrer">SOLN265671</a> Avaya one-X Agent: Error "your login attempt unsuccessful</p> 
-            <p><a href="https://support.avaya.com/public/index?page=content&id=SOLN139197&actp=LIST_POPULAR&rp=home" target="_blank" rel="noreferrer">SOLN139197</a> Daylight Saving Time Change Information</p> 
-            <p><a href="https://support.avaya.com/public/index?page=content&id=PRCS100833&actp=LIST_POPULAR&rp=home" target="_blank" rel="noreferrer">PRCS100833</a> Avaya Support Website Tips and Troubleshooting: Parts Menu Choice Options</p>  
+            <p><a href="https://support.avaya.com/public/index?page=content&id=PRCS100796&actp=LIST_POPULAR&rp=home" target="_blank" rel="noopener noreferrer">PRCS100796</a> IT Help Contact Information for Customers</p> 
+            <p><a href="https://support.avaya.com/public/index?page=content&id=TRNG100385&actp=LIST_POPULAR&rp=home" target="_blank" rel="noopener noreferrer">TRNG100385</a> Tips for Searching effectively on support site</p> 
+            <p><a href="https://support.avaya.com/public/index?page=content&id=SOLN265671&actp=LIST_POPULAR&rp=home" target="_blank" rel="noopener noreferrer">SOLN265671</a> Avaya one-X Agent: Error "your login attempt unsuccessful</p> 
+            <p><a href="https://support.avaya.com/public/index?page=content&id=SOLN139197&actp=LIST_POPULAR&rp=home" target="_blank" rel="noopener noreferrer">SOLN139197</a> Daylight Saving Time Change Information</p> 
+            <p><a href="https://support.avaya.com/public/index?page=content&id=PRCS100833&actp=LIST_POPULAR&rp=home" target="_blank" rel="noopener noreferrer">PRCS100833</a> Avaya Support Website Tips and Troubleshooting: Parts Menu Choice Options</p>  
           </div>
         </div>
       </div>

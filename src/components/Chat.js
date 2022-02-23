@@ -9,12 +9,6 @@ function Chat({socket, username, setUsername, sendMessage, onEnterPress, userEma
     console.log("messageList: ", JSON.stringify(messageList));
   }, [messageList]);
  */
- useEffect(() => { 
-   socket.on("receive_message", (data) => {
-      console.log("data received back from backend: ", data);
-      setMessageList((prev) => [...prev, data]);
-    });
-  }, [socket]);
 
   const lastMesRef = useRef(null);
 
@@ -28,9 +22,11 @@ function Chat({socket, username, setUsername, sendMessage, onEnterPress, userEma
       <div className="chat-body">
 
         {messageList.map((mes, i) => {
-           return (
-             <div ref={lastMesRef} key={i} className="message-div" data-id={username === mes.user ? "client" : "support" } >
-               <p className="message-time">{mes.time} {mes.user}</p>
+          const isYourMessage = socket.id === mes.userId;
+          
+          return (
+             <div ref={lastMesRef} key={i} className="message-div" data-id={isYourMessage ? "client" : "support" } >
+               <p className="message-time">{mes.time} {isYourMessage ? "You:" : ""}</p>
                <p className="message-text">{mes.message}</p>
              </div>
            ) 

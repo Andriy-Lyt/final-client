@@ -8,8 +8,8 @@ import './../styles/App.css';
 const socket = io.connect("http://localhost:3001");
 
 function App() {
-  const[username, setUsername] = useState(localStorage.getItem('username') || '');
-  const[userEmail, setUserEmail] = useState(localStorage.getItem('useremail') || '');
+  // const[username, setUsername] = useState(localStorage.getItem('username') || '');
+  // const[userEmail, setUserEmail] = useState(localStorage.getItem('useremail') || '');
   const [room, setRoom] = useState(localStorage.getItem('room') || '1');
   const [showChat, setShowChat] = useState(room);
 
@@ -27,10 +27,10 @@ function App() {
     <div className="app-container">
       <HomePage />
       <ChatBlock
-        username={username} 
-        setUsername={setUsername}
-        userEmail={userEmail}
-        setUserEmail={setUserEmail}
+        // username={username} 
+        // setUsername={setUsername}
+        // userEmail={userEmail}
+        // setUserEmail={setUserEmail}
         setRoom={setRoom}
         joinRoom={joinRoom}
         socket={socket} 

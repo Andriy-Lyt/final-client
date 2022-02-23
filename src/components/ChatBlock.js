@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Chat from './Chat';
 // import Login from './Login';
 import './../styles/Chat.css';
@@ -7,11 +7,17 @@ import Landing from './Landing';
 
 function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail, setUserEmail, room, showChat, setShowChat}) {
 
+  console.log("ChatBlock.js rendered");
+
   const [isOpen, setIsOpen] = useState(false);
   const [currentMessage, setCurrentMessage] = useState("");
   // const [messageList, setMessageList] = useState(localStorage.getItem("messageList") ? JSON.parse(localStorage.getItem("messageList")) : []);
   const [messageList, setMessageList] = useState([]);
   const [formError, setFormError] = useState("");
+
+  useEffect(() => {
+    console.log("messageList ChatBlock.js line 17: ", messageList);
+  }, [messageList]);
 
   const toggleOpen = () => setIsOpen(!isOpen);
   const toggleShowChat = () => setShowChat(!showChat);
@@ -32,7 +38,8 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
       const printMinutes = minutes < 10 ? `0${minutes}` : minutes;
       const messageData = {
         room: room, //comes from props
-        user: username,
+        // user: username || '',
+        userId: socket.id,
         message: currentMessage,
         time: `${printHours}:${printMinutes}`
       };
@@ -44,6 +51,14 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
     e.target.value = '';
     setCurrentMessage('');
 }
+
+useEffect(() => { 
+  socket.on("receive_message", (data) => {
+     console.log("data received back from backend: ", data);
+     setMessageList((prev) => [...prev, data]);
+   });
+ }, [socket]);
+
 
  function onEnterPress(e) {
    if ( e.key === "Enter" && !e.shiftKey) {
@@ -74,9 +89,9 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
       setMessageList={setMessageList}
       socket={socket} 
       username={"You"} 
-      userEmail={userEmail}
-      setUsername={setUsername}
-      setUserEmail={setUserEmail}
+      // userEmail={userEmail}
+      // setUsername={setUsername}
+      // setUserEmail={setUserEmail}
       room={room} 
       setRoom={setRoom}
       setShowChat={setShowChat}
@@ -97,9 +112,9 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
         setFormError={setFormError}
         socket={socket} 
         username={"You"} 
-        userEmail={userEmail}
-        setUsername={setUsername}
-        setUserEmail={setUserEmail}
+        // userEmail={userEmail}
+        // setUsername={setUsername}
+        // setUserEmail={setUserEmail}
         room={room} 
         setRoom={setRoom}
         setShowChat={setShowChat}
