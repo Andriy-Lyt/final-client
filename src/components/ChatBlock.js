@@ -52,7 +52,7 @@ function ChatBlock({username, setUsername, setRoom, joinRoom, socket, userEmail,
 
 useEffect(() => { 
   socket.on("receive_message", (data) => {
-     console.log("data received back from backend: ", data);
+    //  console.log("data received back from backend: ", data);
      setMessageList((prev) => [...prev, data]);
    });
  }, [socket]);

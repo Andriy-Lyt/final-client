@@ -62,32 +62,32 @@
   margin: 3px 0;
   padding:2px;
   display: block;
+  border-radius: 4px;
 }
 .message-div[data-id='support'] {
   align-self: flex-start;
   text-align: start;
-  background-color: #f0fff0;
+}
+.message-text {
+  padding: 3px;
 }
 .message-div[data-id='support'] .message-text{
-  border-color:#21b066;
+  background-color: #f0fff0;
+  border:1px solid #1bab61;
+  border-radius: 5px;
 }
 .message-div[data-id='client'] {
   align-self: flex-end;
   text-align: end;
-  background-color:#e6fdff;
 }
 .message-div[data-id='client'] .message-text{
-  border-color: #1d4dc4;
+  background-color:#e8f9ff;
+  border: 1px solid #1d4dc4;
+  border-radius: 5px;
 }
 .message-div p {
   margin: 0 2px;
   padding: 3px;
-}
-.message-text{
-  /* background-color: white; */
-  border-radius: 5px;
-  outline: none;
-  /* border-color: #1c3074; */
 }
 .message-time, .message-user {
   font-size: 0.8rem;
